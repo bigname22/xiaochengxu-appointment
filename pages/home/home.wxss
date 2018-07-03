@@ -1,0 +1,104 @@
+/* pages/home/home.wxss */
+
+.iv_logo_parent {
+  width: 100%;
+  text-align: center
+}
+
+.iv_logo {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+}
+
+.iv_bg {
+  width: 100%;
+  height: 148px;
+  margin-bottom: 0px;
+}
+
+.tv_name_parent {
+  width: 100%;
+  text-align: center
+}
+
+.center-info {
+}
+
+.btn_appointment {
+  width: 33%;
+  height: 32px;
+  line-height: 32px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 78px;
+   /* box-shadow: 0px 0px 8px #aaa;  */
+   border:1px solid #F7654E !important; 
+}
+
+.tv_publish_title {
+  font-size: 12px;
+  margin-top: 12px;
+  width: 100%;
+  text-align: center;
+  color: #aaa;
+  height: 48px;
+  line-height: 48px;
+}
+
+.iv_publish {
+  width: 68px;
+  height: 68px;
+  border-radius: 4px;
+}
+
+.tv_publish {
+  margin-top: 4px
+}
+
+.publishs {
+  display:flex;
+  width:100%;
+  justify-content: space-around;
+}
+
+.publish_item {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-size:12px;
+  border-radius: 4px;
+  padding: 12px 10px;
+  background-color: white;
+}
+
+.bottom_info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.btn_list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+}
+
+.menu-item {
+  text-align: center;
+  line-height: 108px;
+}
+
+.item_new_info {
+  padding: 4px 16px;
+}
+
+.iv_header {
+  border-radius: 50%;
+  overflow: hidden;
+}

@@ -1,0 +1,24 @@
+<!--pages/goods/goods.wxml-->
+<view class='parent'>
+  <view class="item" wx:for="{{goods}}">
+    <!--上半-->
+    <view class="item_top bg_color3">
+      <view class="top_left">
+        <image class="iv_barber" src='/assets/img/ic_p6.jpg'></image>
+        <text class="tv_name">阿里斯</text>
+        <text class="tv_job">店长</text>
+      </view>
+      <text class="tv_price">¥68</text>
+    </view>
+    <!--下半-->
+    <view class="item_top">
+      <view class="top_left">
+        <text class="tv_key_reedback_rate">好评率:</text>
+        <text class="tv_value_reedback_rate">100%</text>
+        <text class="tv_key_reservation_number">预约数:</text>
+        <text class="tv_value_reservation_number">440</text>
+      </view>
+      <view bindtap='btnClickGoodsItem' data-item="{{item}}" class="btn_appointment bg_color4 tv_white">预约</view>
+    </view>
+  </view>
+</view>

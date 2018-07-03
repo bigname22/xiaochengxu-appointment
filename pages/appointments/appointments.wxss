@@ -1,0 +1,82 @@
+/* pages/appointments/appointments.wxss */
+.item{
+  margin: 16px;
+  padding: 16px 16px;
+  box-shadow: 0px 0px 2px 1px #ccc;
+}
+
+.tv_appointment_time {
+  text-align: center;
+  padding: 8px 0px;
+}
+
+.item-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0px;
+}
+
+.item_key_value {
+  text-align: center;
+}
+
+.tv_key {
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.tv_value {
+  font-size: 18px;
+  color: #F7654E;
+}
+
+.divider {
+  width: 1px;
+  height: 28px;
+  background-color: #eee;
+}
+
+.tv_status {
+  font-size: 12px;
+}
+
+.btn_func {
+  text-align: center;
+  line-height: 24px;
+  /* border: 1px solid #aaa; */
+   border-radius: 12px; 
+  font-size: 14px;
+  margin: 4px;
+}
+
+.tv_func {
+  font-size: 14px;
+  margin: 8px 4px;
+  color: #6a6a6a;
+}
+
+.circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: green;
+  margin-right: 12px;
+}
+
+.tv_title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.v_divider {
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+}
+
+.tv_count_down {
+  font-size: 18px;
+}

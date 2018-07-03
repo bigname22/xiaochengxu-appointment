@@ -1,0 +1,78 @@
+/* pages/goods/goods.wxss */
+.parent {
+
+}
+
+.iv_barber {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  margin-bottom: 28px
+}
+
+.item {
+  margin: 42px 16px;
+  box-shadow: 0px 0px 2px 1px #ccc;
+  border-radius: 4px;
+}
+
+.item_top {
+  padding: 8px 16px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.top_left {
+  display: flex;
+  align-items: center
+}
+
+.tv_name {
+  font-size: 16px;
+  margin: 0px 12px;
+}
+
+.tv_job {
+  font-size: 12px;
+  color: #9e9e9e;
+  padding: 1px 2px;
+  height: 12px;
+  border-radius: 6px;
+}
+
+.tv_price {
+  font-size: 22px;
+  color: red
+}
+
+.tv_key_reedback_rate {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.tv_value_reedback_rate {
+  font-size: 14px;
+  margin: 0px 16px 0px 4px;
+  color: #6e6e6e;
+}
+
+.tv_key_reservation_number {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0px 4px 0px 0px;
+}
+
+.tv_value_reservation_number {
+  font-size: 14px;
+  color: #6e6e6e;
+}
+
+.btn_appointment {
+  width: 68px;
+  height: 32px;
+  border-radius: 16px;
+  line-height: 32px;
+  text-align: center;
+}

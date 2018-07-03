@@ -1,0 +1,57 @@
+<!--pages/appointments/appointments.wxml-->
+<view>
+  <view wx:for="{{appointments}}" class="item">
+    <view class='tv_title'>
+      <view class='circle' style="background-color: {{item.color}}"></view>
+      <text class='class_block tv_status'>{{item.statusDesc}}</text>
+    </view>
+    <view class='v_divider'></view>
+    <!-- 上：到店时间 -->
+    <view class='tv_appointment_time'>
+      <text class="tv_key">到店时间</text>
+      <text>{{item.appointmentTime}}</text>
+    </view>
+    <!-- 下 -->
+    <view>
+      <view class='item-detail'>
+        <view class='item_key_value'>
+          <text class="class_block tv_key">预约理发师</text>
+          <text class='tv_value'>{{item.barber.name}}</text>
+        </view>
+        <view class='divider'></view>
+        <view class='item_key_value'>
+          <text class="class_block tv_key">人数</text>
+          <text class='tv_value'>{{item.appointmentNumberOfPeople}}</text>
+        </view>
+         <view class='divider'></view> 
+        <view class='item_key_value' wx:if="{{item.status >=0 && item.status <= 4}}">
+          <!--0未接单：显示催单、取消预约的功能按钮 的状态-->
+          <view wx:if="{{item.status === 0}}">
+            <button class="btn_func bg_color1 tv_white" bindtap="btnClickReminder"> 催约 </button>
+            <text class='class_block tv_func'> 取消预约 </text>
+          </view>
+          <!--1已接单：显示到店时间倒计时-->
+          <view wx:elif="{{item.status === 1}}">
+            <text class="class_block tv_key">到店倒计时</text>
+            <text class='tv_count_down'></text>
+            01
+            <text style='font-size:10px;color:#ccc'>天</text>
+            12
+            <text style='font-size:10px;color:#ccc'>H</text>
+            01
+            <text style='font-size:10px;color:#ccc'>m</text>
+          </view>
+          <!--2/3取消单：重新预约 （分商户取消跟用户取消）-->
+          <view wx:elif="{{item.status === 2 || item.status === 3}}">
+            <button class="btn_func bg_color1 tv_white" bindtap="btnClickReminder"> 重新预约 </button>
+          </view>
+          <!--4已结单：显示评价、再预约的功能按钮-->
+          <view wx:elif="{{item.status === 4}}">
+            <button class="btn_func bg_color1 tv_white" bindtap="btnClickReminder"> 再预约 </button>
+            <text class='class_block tv_func tv_color1'> 评价 </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

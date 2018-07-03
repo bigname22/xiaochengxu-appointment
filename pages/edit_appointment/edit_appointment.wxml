@@ -1,0 +1,69 @@
+<!--pages/appointments/appointments.wxml-->
+<view>
+  <view class="boss bg_color2">
+    <view class='iv_boss'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view>
+      <view>周润发</view>
+      <view>18827272712</view>
+    </view>
+  </view>
+   <!--到店人数-->
+   <view class="item_people_number">
+    <text class="tv_key">到店人数</text>
+    <view class="numbers_container">
+      <view wx:for="{{peopleNums}}" bindtap='btnClickNum' data-item="{{item}}" class="{{item.check?'number_select people_number':'number_normal people_number'}}">{{item.text}}</view>
+    </view>
+  </view> 
+  <!--到店时间-->
+  <view class="item_people_number">
+    <text  class="tv_key">到店时间</text>
+    <view class="item_date">
+      <view class="section">
+        <view class="tv_eee">预约日期</view>
+        <picker class="picker_date" mode="date" value="{{appointmentDate}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="picker">
+            {{appointmentDate}}
+          </view>
+        </picker>
+      </view>
+      <view class="divider"></view>
+      <view class="section">
+        <view class="tv_eee">预约时间</view>
+        <picker class="picker_time" mode="time" value="{{appointmentTime}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+          <view class="picker">
+            {{appointmentTime}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    
+  </view>
+  <!--预约理发师-->
+  <view class="item_people_number">
+    <text class="tv_key">预约理发师</text>
+    <view class="barber_container" >
+      <view wx:if="{{showBarber}}" bindtap="btnClickAddGood" class='barber'>
+        <view class="barber_left">
+          <image bindtap="btnClickAddGood" class="iv_barber" src='/assets/img/ic_p6.jpg'></image>
+          <text class='tv_barber_name'>{{barber.name}}</text>
+        </view>
+        <view class="barber_right">
+          <text>¥{{barber.price}}</text>
+          <icon class="iv_right iconfont icon-youjiantou"></icon>
+        </view>
+      </view>
+      <view wx:else="{{showBarber}}">
+        <image bindtap="btnClickAddGood" class="iv_add" src='/assets/img/ic_add.svg'></image>
+      </view>
+    </view>
+  </view>
+  <!--备注-->
+  <view class="item_people_number">
+    <textarea bindblur="bindTextAreaBlur" auto-height maxlength="200" placeholder="备注：不超过200字" />
+  </view>
+  <!--预约提交-->
+  <button class="btn_appointment bg_color1" type="primary" loading="{{loading}}" 
+        bindtap="btnClickAppointment"> 预约 </button>
+</view>

@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/appointments/appointments",
+    "pages/goods/goods",
+    "pages/edit_appointment/edit_appointment",
+    "pages/appointmentDetail/appointmentDetail",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "理发预约",
+    "navigationBarTextStyle": "black"
+  }
+}

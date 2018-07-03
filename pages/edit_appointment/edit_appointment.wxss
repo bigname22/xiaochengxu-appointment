@@ -1,0 +1,130 @@
+/* pages/appointments/appointments.wxss */
+
+.boss {
+  display: flex;
+  align-items: center;
+  margin: 12px 28px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  color: white;
+}
+
+.iv_boss {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 16px;
+}
+
+.item_people_number {
+  background-color: white;
+  padding: 8px 16px;
+  box-shadow: 0px 0px 1px 1px #eee;
+  margin: 8px  16px 24px 16px;
+}
+
+.numbers_container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.people_number {
+  height: 28px;
+  line-height: 28px;
+  padding: 0px 12px;
+  text-align: center;
+  border-radius: 14px;
+  margin: 4px 8px 4px 0px;
+  font-size: 14px;
+}
+
+.number_normal {
+  border: 1px solid #eee;
+}
+
+.number_select {
+  background-color: #F7654E;
+  color: white;
+}
+
+.tv_key {
+  color: #FB8C7A;
+  font-size: 16px;
+}
+
+.item_date {
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  margin-top: 12px;
+}
+
+.tv_eee {
+  color: #ccc;
+  font-size: 14px;
+  width: 100%;
+  text-align: center
+}
+
+.picker{
+  width: 100%;
+  text-align: center;
+}
+
+.divider {
+  height: 38px;
+  border-left: 1px solid #eee;
+}
+
+.barber_container {
+  margin-top: 12px;
+}
+
+.iv_add {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #eee;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.btn_appointment {
+  margin: 24px 16px;
+}
+
+.iv_barber {
+  border: 1px solid #eee;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.iv_right {
+  opacity: 0.1;
+}
+
+.barber {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barber_left {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+ .barber_right {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+ }
+
+ .tv_barber_name {
+   margin: 0px 8px;
+ }

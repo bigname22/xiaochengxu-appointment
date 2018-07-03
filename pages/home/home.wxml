@@ -1,0 +1,36 @@
+<view>
+  <!--顶部：背景图 logo图 店名-->
+  <view class="top-info">
+    <image wx:if='{{showBg}}' class="iv_bg" src='/assets/img/ic_p9.jpg'></image>
+    <view class="iv_logo_parent">
+      <image class="iv_logo" src='/assets/img/ic_p6.jpg'></image>
+    </view>
+    <view class="tv_name_parent">
+      <text>{{text.name}}</text>
+    </view>
+  </view>
+  <!--中间：预约按钮-->
+  <view class="center-info">
+    <button bindtap='btnClickAppointment' plain='true' class="btn_appointment tv_color1">{{text.appointment}}</button> 
+  </view>
+  <!--底部：最新信息、按钮列表-->
+  <view class='bottom_info'>
+    <view class="tv_publish_title divider">{{text.publish}}</view>
+    <!--公告列表-->
+    <view class="publishs">
+      <view class="publish_item" wx:for="{{publishs}}" >
+        <image class="iv_publish" src='{{item.icon}}'></image>  
+        <text class="class_block tv_publich">{{item.name}}</text>
+      </view>
+    </view>
+    <!--按钮列表-->
+    <view class='btn_list bg_color2'>
+      <view class="menu-item" bindtap="btnClickGoods">
+        <text class="tv_white">{{text.func1}}</text>
+      </view>
+      <view class="menu-item" bindtap="btnClickAppointments">
+        <text class="tv_white">{{text.func2}}</text>
+      </view>
+    </view>
+  </view>
+</view>
