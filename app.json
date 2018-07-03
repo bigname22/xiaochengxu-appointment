@@ -2,10 +2,11 @@
   "pages": [
     "pages/home/home",
     "pages/appointmentDetail/appointmentDetail", 
+    "pages/goods_detail/goods_detail",    
     "pages/appointments/appointments",
     "pages/goods/goods",
     "pages/edit_appointment/edit_appointment",
-    "pages/goods_detail/goods_detail",
+    
     "pages/index/index",
     "pages/logs/logs"
   ],
