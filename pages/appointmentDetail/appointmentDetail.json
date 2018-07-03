@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "预约详情"
+  "navigationBarTitleText": "预约详情",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "appointmentProgress": "/components/appointment_progress/appointment_progress"
+  }
 }

@@ -1,1 +1,93 @@
 /* pages/appointmentDetail/appointmentDetail.wxss */
+.item_top {
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  padding: 24px 16px 8px 16px;
+  align-items:flex-end;
+}
+
+.item_detail {
+  margin: 16px;
+  padding: 16px;
+  box-shadow: 0px 0px 1px #ccc;
+}
+
+.btn_func {
+  text-align: center;
+  line-height: 24px;
+  /* border: 1px solid #aaa; */
+   border-radius: 12px; 
+  font-size: 14px;
+  margin: 4px;
+}
+
+.tv_func {
+  text-align: center;
+  font-size: 16px;
+  margin: 6px 4px;
+}
+
+.tv_title {
+  font-size: 28px;
+  color: white;
+}
+
+.tv_count_down {
+  color: #ddd;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+
+.item_left {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 14px;
+  height: 14px;
+  background: #ececec;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.item_detail_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.tv_key {
+  color: #7a7a7a;
+  font-size: 16px;
+  
+}
+
+.tv_value {
+  color: #7a7a7a;
+  font-size: 16px;
+}
+
+.tv_store_name {
+  font-size: 18px;
+}
+
+.iv_divider {
+  border-bottom: 1px solid #eee;
+  margin: 12px 0px;
+}
+
+.item_func {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  line-height: 58px;
+  border-top: 1px solid #eee;
+}

@@ -1,2 +1,96 @@
 <!--pages/appointmentDetail/appointmentDetail.wxml-->
-<text>预约</text>
+<view>
+  <view class='item_top' style='background-color: {{appointmentDetail.color}}'>
+    <text class='tv_title'>{{appointmentDetail.statusDesc}}</text>
+    <view>
+      <!--未接单-显示催单按钮-->
+      <button wx:if="{{appointmentDetail.status == 0}}" class="btn_func bg_color4 tv_white" bindtap="btnClickReminder"> 催单 </button>
+      <!--已接单-显示倒计时-->
+      <view style="color:white;font_size:28px"  wx:elif="{{appointmentDetail.status == 1}}">
+        <text class="tv_count_down">到店倒计时</text>
+        <text style='font-size: 22px;'>01</text>
+        <text style='font-size:12px;color:#ccc;margin: 0px 4px 0px 2px'>天</text>
+        <text style='font-size: 22px;'>12</text>
+        <text style='font-size:12px;color:#ccc;margin: 0px 4px 0px 2px'>H</text>
+        <text style='font-size: 22px;'>01</text>
+        <text style='font-size:12px;color:#ccc;margin: 0px 4px 0px 2px'>m</text>
+      </view>
+      <!--2/3取消单：重新预约 （分商户取消跟用户取消）-->
+      <view wx:elif="{{appointmentDetail.status === 2 || appointmentDetail.status === 3}}">
+        <button class="btn_func bg_color4 tv_white" bindtap="btnClickReminder"> 重新预约 </button>
+      </view>
+      <!--4已结单：显示评价、再预约的功能按钮-->
+      <view wx:elif="{{appointmentDetail.status === 4}}">
+        <button class="btn_func bg_color4 tv_white" bindtap="btnClickReminder"> 再预约 </button>
+        <text class='class_block tv_func tv_color1' bindtap="btnClickReminder"> 评价 </text>
+      </view>
+    </view>
+  </view>
+  <view class='item_detail'>
+    <view class='tv_store_name'>{{appointmentDetail.store.name}}</view>
+    <view class='iv_divider'></view>
+    <view class='item_detail_item'>
+      <view class='item_left'>
+        <view class='circle'></view>
+        <view class='tv_key'>到店时间</view>
+      </view>
+      <view class='item_right'>
+        <text class='tv_value'>{{appointmentDetail.appointmentTime}}</text>
+      </view>
+    </view>
+    <view class='item_detail_item'>
+      <view class='item_left'>
+        <view class='circle'></view>
+        <view class='tv_key'>到店人数</view>
+      </view>
+      <view class='item_right'>
+        <text class='tv_value'>{{appointmentDetail.appointmentNumberOfPeople}}</text>
+      </view>
+    </view>
+    <view class='item_detail_item'>
+      <view class='item_left'>
+        <view class='circle'></view>
+        <view class='tv_key'>预约理发师</view>
+      </view>
+      <view class='item_right'>
+        <text class='tv_value'>{{appointmentDetail.barber.name}}</text>
+      </view>
+    </view>
+    <view class='item_detail_item'>
+      <view class='item_left'>
+        <view class='circle'></view>
+        <view class='tv_key'>预留姓名</view>
+      </view>
+      <view class='item_right'>
+        <text class='tv_value'>{{appointmentDetail.name}}</text>
+      </view>
+    </view>
+    <view class='item_detail_item'>
+      <view class='item_left'>
+        <view class='circle'></view>
+        <view class='tv_key'>预留号码</view>
+      </view>
+      <view class='item_right'>
+        <text class='tv_value'>{{appointmentDetail.phone}}</text>
+      </view>
+    </view>
+    <view class='item_detail_item'>
+      <view class='item_left'>
+        <view class='circle'></view>
+        <view class='tv_key'>提交时间</view>
+      </view>
+      <view class='item_right'>
+        <text class='tv_value'>{{appointmentDetail.editTime}}</text>
+      </view>
+    </view>
+  </view>
+  <!--进度条-->
+  <view class='item_progress'>
+    <appointmentProgress status="{{appointmentDetail.status}}"></appointmentProgress>
+  </view>
+  <!--功能按钮列-->
+  <view class='item_func'>
+    <view>取消预约</view>
+    <view>联系商家</view>
+  </view>
+</view>

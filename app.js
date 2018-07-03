@@ -39,5 +39,35 @@ App({
     mainColor3: "#FBA99D",
     mainColor4: "#A12C19",
     userInfo: null
+  },
+  // 通过订单status返回订单状态描述getValuesByStatus
+  getValuesByStatus: function (status) {
+    let valueObj = {
+      desc: '',
+      color: ''
+    };
+    switch (status) {
+      case 0:
+        valueObj.desc = '未接单';
+        valueObj.color = '#FF0000'
+        break;
+      case 1:
+        valueObj.desc = '已接单';
+        valueObj.color = '#228B22'
+        break;
+      case 2:
+        valueObj.desc = '已取消';
+        valueObj.color = '#BEBEBE'
+        break;
+      case 3:
+        valueObj.desc = '已取消';
+        valueObj.color = '#BEBEBE'
+        break;
+      case 4:
+        valueObj.desc = '已结单';
+        valueObj.color = '#FFD700'
+        break;
+    }
+    return valueObj;
   }
 })

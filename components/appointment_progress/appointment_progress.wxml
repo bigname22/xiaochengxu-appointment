@@ -1,0 +1,9 @@
+<!--components/appointment_progress/appointment_progress.wxml-->
+<view class='appointment_progress_container'>
+  <view wx:for="{{statues}}" class='item_status'>
+    <!-- <view class='divider_left'></view> -->
+    <view style="color: {{status == item.status ? 'green' : (status < item.status ? '#ccc' : '#aaa')}}">{{item.desc}}
+    </view>
+    <!-- <view class='divider_right'></view> -->
+  </view>
+</view>

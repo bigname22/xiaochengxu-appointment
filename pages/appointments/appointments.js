@@ -7,6 +7,7 @@ Page({
   data: {
     appointments: [
       {
+        id: '1231',
         name: '周润发',                    // 预留姓名
         phone: '18828384234',              // 预留电话
         status: 1,                          // 0:未接单 1：已接单 2：用户取消 3：商家取消 4：已接单
@@ -24,6 +25,7 @@ Page({
         }, 
       },
       {
+        id: '1232',
         name: '周润发',                    // 预留姓名
         phone: '18828384234',              // 预留电话
         status: 4,                         // 0:未接单 1：已接单 2：用户取消 3：商家取消 4：已结单
@@ -102,7 +104,7 @@ Page({
   fixData: function () {
     for (let i=0;  i< this.data.appointments.length;  i++) {
       let item = this.data.appointments[i];
-      let valueObj = this.getValuesByStatus(item.status)
+      let valueObj = getApp().getValuesByStatus(item.status)
       console.log('---', valueObj);
       item.statusDesc = valueObj.desc;
       item.color = valueObj.color;
@@ -113,34 +115,9 @@ Page({
     })
   },
 
-  // 通过订单status返回订单状态描述getValuesByStatus
-  getValuesByStatus: function (status) {
-    let valueObj = {
-      desc: '',
-      color: ''
-    };
-    switch (status) {
-      case 0:
-        valueObj.desc = '未接单';
-        valueObj.color = 'red'
-      break;
-      case 1:
-        valueObj.desc = '已接单';
-        valueObj.color = 'green'
-        break;
-      case 2:
-        valueObj.desc = '已取消';
-        valueObj.color = 'grey'
-        break;
-      case 3:
-        valueObj.desc = '已取消';
-        valueObj.color = 'grey'
-        break;
-      case 4:
-        valueObj.desc = '已结单';
-        valueObj.color = 'yellow'
-        break;
-    }
-    return valueObj;
+  btnClickItem: function (e) {
+    wx.navigateTo({
+      url: '../appointmentDetail/appointmentDetail?appointmentId=' + e.currentTarget.dataset.item.id
+    })
   }
 })

@@ -1,6 +1,6 @@
 <!--pages/appointments/appointments.wxml-->
 <view>
-  <view wx:for="{{appointments}}" class="item">
+  <view wx:for="{{appointments}}" class="item" bindtap='btnClickItem' data-item="{{item}}">
     <view class='tv_title'>
       <view class='circle' style="background-color: {{item.color}}"></view>
       <text class='class_block tv_status'>{{item.statusDesc}}</text>
