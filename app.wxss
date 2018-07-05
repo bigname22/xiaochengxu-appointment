@@ -72,6 +72,16 @@
   border-top: 1px solid #eee;
 }
 
+.v-divider {
+  background-color: #eee;
+  height: 1px;
+  width: 100%;
+}
+
+.box_shadow {
+  box-shadow: 0px  0px 1px 0px #ccc;
+}
+
 
 @font-face {
   font-family: 'iconfont';  /* project id 518032 */

@@ -11,18 +11,57 @@
   </view>
   <!--中间：预约按钮-->
   <view class="center-info">
-    <button bindtap='btnClickAppointment' plain='true' class="btn_appointment tv_color1">{{text.appointment}}</button> 
+    <!--商家功能列表、地址-->
+    <view class='store_info box_shadow'>
+      <!--功能图标集合-->
+      <view class='func_list'>
+        <view class='item_iv_func'>
+          <image class='iv_func' src='/assets/img/ic_position.svg'></image>
+        </view>
+        <view class='item_iv_func'>
+          <image class='iv_func' src='/assets/img/ic_phone.svg'></image>
+        </view>
+        <view class='item_iv_func' bindtap='btnClickAppointment'>
+          <image class='iv_func' src='/assets/img/ic_appointment.svg'></image>
+        </view>
+      </view>
+      <!--地址-->
+      <view class='v-divider'></view>
+      <view class='tv_adress'>
+        {{storeInfo.address}}
+      </view>
+    </view>
+    <!--公告-->
+    <view>
+      <swiper indicator-dots="{{false}}"
+    autoplay="{{false}}" >
+        <block wx:for="{{publishs}}">
+          <swiper-item>
+            <view class='slide_publish_item'>
+              <image src="{{item.icon}}" class="iv_publish"/>
+              <view class='slide_tv'>
+                <view>{{item.title}}</view>
+                <view>{{item.desc}}</view>
+              </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!--作品集-->
+    <view></view>
+    <!-- <view bindtap='btnClickAppointment' plain='{{false}}' class="btn_appointment bg_color1 tv_white">{{text.appointment}}</view>  -->
   </view>
   <!--底部：最新信息、按钮列表-->
   <view class='bottom_info'>
     <view class="tv_publish_title divider">{{text.publish}}</view>
     <!--公告列表-->
-    <view class="publishs">
+    <!-- <view class="publishs">
       <view class="publish_item" wx:for="{{publishs}}" >
         <image class="iv_publish" src='{{item.icon}}'></image>  
         <text class="class_block tv_publich">{{item.name}}</text>
       </view>
-    </view>
+    </view> -->
     <!--按钮列表-->
     <view class='btn_list bg_color2'>
       <view class="menu-item" bindtap="btnClickGoods">

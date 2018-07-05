@@ -2,7 +2,7 @@
 
 .iv_logo_parent {
   width: 100%;
-  text-align: center
+  text-align: center 
 }
 
 .iv_logo {
@@ -23,16 +23,18 @@
 }
 
 .center-info {
+  padding: 24px 16px;
+  text-align: center;
 }
 
 .btn_appointment {
-  width: 33%;
+  width: 100%;
+  border-radius: 8px;
   height: 32px;
   line-height: 32px;
   color: white;
   text-align: center;
   font-size: 18px;
-  margin-top: 78px;
    /* box-shadow: 0px 0px 8px #aaa;  */
    border:1px solid #F7654E !important; 
 }
@@ -101,4 +103,51 @@
 .iv_header {
   border-radius: 50%;
   overflow: hidden;
+}
+
+.store_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.iv_func {
+  width: 28px;
+  height: 28px;
+}
+
+.func_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px 8px;
+}
+
+.item_iv_func {
+  flex: 1;
+}
+
+.v-divider {
+  margin: 8px 0px;
+}
+
+.tv_adress{
+  color: #aaa;
+}
+
+.store_info {
+  border-radius: 8px;
+  padding: 12px 8px;
+}
+
+.slide_publish_item {
+   display: flex; 
+   background-color: indianred;
+   color: white;
+   height: 68px;
+   border-radius: 4px;
+}
+
+.slide_tv {
+  text-align: left;
 }

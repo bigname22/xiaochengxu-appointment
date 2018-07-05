@@ -6,19 +6,30 @@ Page({
    */
   data: {
     showBg: false,
+    storeInfo: {
+      name: '欧莱雅雅理发店',
+      phone: '020-213213',
+      address: '广东省广州市白云区聚隆广场8号',
+    },
     userInfo: {},
     publishs: [
       {
         icon: '/assets/img/ic_p6.jpg',
-        name: 'Alex伦仔'
+        title: '中秋节大优惠',
+        desc: '洗剪吹只需20元，会员冲100送100',
+        content: ''
       },
       {
         icon: '/assets/img/ic_p6.jpg',
-        name: 'Ami伦仔'
+        title: '中秋节大优惠',
+        desc: '洗剪吹只需20元，会员冲100送100',
+        content: ''
       },
       {
         icon: '/assets/img/ic_p6.jpg',
-        name: 'An伦仔'
+        title: '中秋节大优惠',
+        desc: '洗剪吹只需20元，会员冲100送100',
+        content: ''
       }
     ],
     text: {
