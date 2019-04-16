@@ -16,3 +16,11 @@ csdn: https://blog.csdn.net/bigname22/article/details/80894354
 用过vue、ionic之类的框架的同学应该很容易上手这个东东、目前来说相对比vue、ionic来说，小程序只是换换语法、少了一些功能而已。能记起来几个不顺手的地方，一个就是双向绑定数据源那边做了修改还必须要用setData去改变值才会得到响应、html的标签不能用、wx:for标签用的不顺手(心理作用)。
 
 工作了一年半，学的很杂乱无章，很多东西都懂一点、但又什么都不懂；对某个技术没有够硬的基础、没有深度的挖掘，加上慵懒散漫的性格，使得技术层次方面没有大的进步，只能偶尔看看书维持下程序员的生活。
+
+<img src="https://img-blog.csdn.net/20180703090536775?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JpZ25hbWUyMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width=271 alt="">
+
+<img src="https://img-blog.csdn.net/20180703090818629?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JpZ25hbWUyMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width=271 alt="">
+
+<img src="https://img-blog.csdn.net/20180703090830231?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JpZ25hbWUyMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width=271 alt="">
+
+<img src="https://img-blog.csdn.net/20180703090838938?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JpZ25hbWUyMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width=271 alt="">
